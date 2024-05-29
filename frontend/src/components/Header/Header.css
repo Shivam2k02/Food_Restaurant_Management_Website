@@ -1,0 +1,65 @@
+.header {
+    height: 34vw;
+    margin: 30px auto;
+    animation: changeBackground 40s infinite;
+    background-size: contain;
+    position: relative;
+    border-radius: 20px;
+     /* Duration must be a multiple of the number of images */
+}
+
+@keyframes changeBackground {
+    0%, 16% {
+        background: url('/header_img1.png') no-repeat;
+    }
+    20%, 36% {
+        background: url('/header_img2.png') no-repeat;
+    }
+    40%, 56% {
+        background: url('/header_img3.png') no-repeat;
+    }
+    60%, 76% {
+        background: url('/header_img4.png') no-repeat;
+    }
+    80%, 99.9% {
+        background: url('/header_img5.png') no-repeat; /* Back to the first image */
+    }
+}
+
+.header-contents{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5vw;
+    max-width: 50%;
+    bottom: 10%;
+    left: 6vw;
+    animation: fadeIn 3s;
+}
+
+.header-contents h2{
+    font-weight: 500;
+    color: rgb(8, 8, 8);
+    font-size: max(4.5vw, 22px);
+}
+.header-contents p{
+    color: rgb(48, 46, 46);
+    font-size: 1vw;
+}
+
+.header-contents button{
+    cursor: pointer;
+    border: none;
+    color: #747474;
+    font-weight: 500;
+    padding: 1vw 2.3vw;
+    background-color: white;
+    font-size: max(1vw, 13px);
+    border-radius: 15px;
+}
+
+.header-contents button:hover{
+    color: tomato;
+}
+
